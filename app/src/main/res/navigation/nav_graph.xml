@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/jobsFragment">
+
+    <fragment
+        android:id="@+id/jobsFragment"
+        android:name="com.example.localapp.view.fragment.JobsFragment"
+        android:label="Jobs"
+        tools:layout="@layout/fragment_jobs">
+
+        <action
+            android:id="@+id/action_jobsFragment_to_bookmarkFragment"
+            app:destination="@id/bookmarkFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.example.localapp.view.fragment.BookmarkFragment"
+        android:label="Bookmarks"
+        tools:layout="@layout/fragment_bookmarks">
+
+        <action
+            android:id="@+id/action_bookmarkFragment_to_jobsFragment"
+            app:destination="@id/jobsFragment" />
+    </fragment>
+
+</navigation>
